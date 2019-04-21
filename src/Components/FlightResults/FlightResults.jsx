@@ -8,6 +8,8 @@ import { StayContext } from '../../Context/Context'
 
 const FlightResults = () => {
 
+    const stayState = useContext(StayContext);
+
     return (
         <main className={styles.flightResults}>
             <h3 className={styles.resultsTitle}>Vuelos destacados en 
@@ -16,8 +18,7 @@ const FlightResults = () => {
 
             <Query 
                     query={CARDS_QUERY}
-                    variables={{stayId: '1'}}
-                    pollInterval={500}
+                    variables={{ stayId: stayState.stayId }}
                 >
                     {({loading, error, data}) => {
                         if(loading) return <Spinner />;
@@ -26,7 +27,6 @@ const FlightResults = () => {
                         return (
                             <div className={styles.cardsContainer}>
                                 {data.allCards.map((flight) => {
-                                    console.log(flight);
                                     return (
                                         <Card flight={flight} key={flight.id} />
                                     )

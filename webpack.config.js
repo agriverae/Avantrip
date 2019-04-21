@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 var OpenBrowserPlugin = require('open-browser-webpack-plugin');
@@ -51,6 +52,10 @@ module.exports = {
     },
     resolve: {
         extensions: ['*', '.js', '.jsx']
+    },
+    externals: {
+        'react': 'React',
+        'react-dom': 'ReactDOM',
     },
     plugins: [
         new HtmlWebpackPlugin({

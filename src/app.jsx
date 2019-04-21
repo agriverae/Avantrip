@@ -9,11 +9,17 @@ import { StayContext } from './Context/Context'
 
 const App = () => {
 
-    const [count, setCount] = useState(0);
+    const [stayId, setStayId] = useState('1')
+
+    const handleStayChange = (id) => {
+        setStayId(id);
+    }
+
+    const provider = {stayId, handleStayChange}
 
     return (
-        <StayContext.Provider value={'1'}>
-            <Query query={STAYS_QUERY} pollInterval={1000}>
+        <StayContext.Provider value={provider}>
+            <Query query={STAYS_QUERY}>
                 
                     {({ loading, error, data }) => {
                         if(loading) return <Spinner />;

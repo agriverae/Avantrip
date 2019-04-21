@@ -3,6 +3,11 @@
     "plugins": [
         "react"
     ],
+    "settings": {
+        "react" : {
+            "version": "detect"
+        }
+    },
     "rules": {
         "no-console": "off"
     },
