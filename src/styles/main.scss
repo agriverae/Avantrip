@@ -1,0 +1,228 @@
+// BASE START
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // this defines what 1 rem is
+    font-size: 62.5%; /* Default font size 16px */ 
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+$color-white: #fff;
+$color-black: #000;
+$color-red: rgb(255,0,0);
+
+// BASE END
+
+// MISCELLANEOUS START
+
+.strongFont {
+    font-weight: 700;
+}
+
+.highlightText {
+    color: #66A2E1;
+}
+
+// MISCELLANEOUS END
+
+// HEADER START
+
+.header {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding-left: 12%;
+
+    .imageContainer {
+        width: 80px
+    }
+    
+}
+
+img {
+    width: 100%;
+}
+
+.title {
+    font-size: 2rem;
+    color: $color-red;
+}
+
+// HEADER END
+
+// CHEAPFLIGHT START
+
+.cheapFlights {
+    position: relative;
+    width: 100%;
+    height: 95px;
+    background-image: linear-gradient(to top right,#898C8C, #2F7271);
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flightTitles {
+    color: #fff;
+    font-size: 2.3rem;
+    font-weight: 300;
+}
+
+// CHEAPFLIGHT END
+
+// FLIGHTRESULTS START
+
+.flightResults {
+    padding-top: 4.5rem;
+    background-color: #EEEEED;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 40px;
+}
+
+.resultsTitle {
+    color: $color-black;
+    font-size: 3rem;
+    font-weight: 300;
+
+    &Highlight {
+        font-weight: 800;
+    }
+}
+
+// FLIGHTRESULTS END
+
+// SPINNER START
+
+.spinner {
+    margin: -75px 0 0 -75px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+  }
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+// SPINNER END
+
+// CARDS START
+
+.cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    top: 15px;
+}
+
+.smallCard {
+    width: 150px;
+    height: 50px;
+    text-align: left;
+    padding-top: 0.625rem;
+    padding-left: 0.625rem;
+    background-color: $color-white;
+    margin-left: 1.2rem;
+    box-shadow: 11px 13px 15px -12px rgba(0,0,0,0.39);
+
+    &:last-child {
+        margin-right: 1.2rem;
+    }
+
+    &Title {
+        color: $color-black;
+        font-size: 1.25rem;
+    }
+
+    &Text {
+        font-size: 1.5rem;
+    }
+}
+
+.card {
+    width: 265px;
+    height: 285px;
+    background-color: $color-white;
+    margin-left: 10px;
+    margin-bottom: 10px;
+
+    &Image {
+        height: 70%;
+    }
+
+    &Content {
+        padding: 10px 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &Details {
+        color: $color-red;
+        font-size: 1.4rem;
+        font-weight: 800;
+        text-align: left;
+        align-items: center;
+
+        &Big {
+            font-size: 1.8rem;
+        }
+    }
+
+    &Link {
+        align-self: flex-end;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.25rem;
+        margin: 10px 0;
+        color: rgb(95, 163, 202);
+    }
+}
+
+.contentFormat {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.miscellaneous {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+// CARDS END
+
+
+// MEDIA QUERYS START
+
+@media screen and (max-width: 900px) {
+    .cheapFlights {
+        height: 140px;
+    }
+}
+
+//MEDIA QUERYS END
