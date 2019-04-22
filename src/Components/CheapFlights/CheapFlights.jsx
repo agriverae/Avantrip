@@ -2,6 +2,7 @@ import React, {useContext} from 'react';
 import styles from '../../styles/main.scss';
 import SmallCard from '../CardTypes/SmallCard';
 import { StayContext } from '../../Context/Context'
+import PropTypes from 'prop-types';
 
 const CheapFlights = ({stays}) => {
 
@@ -20,6 +21,7 @@ const CheapFlights = ({stays}) => {
                 const text = `desde $${price}`;
                 return ( 
                     <SmallCard
+                        selected={stay.customId === stayState.stayId}
                         clickHandler={() => clickHandler(stay.customId)}
                         title={stay.label}
                         highlightText={true}
@@ -30,6 +32,10 @@ const CheapFlights = ({stays}) => {
             </div>
         </section>
     )
+}
+
+CheapFlights.propTypes = {
+    stays: PropTypes.array
 }
 
 export default CheapFlights;

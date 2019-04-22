@@ -21,6 +21,7 @@ body {
 
 $color-white: #fff;
 $color-black: #000;
+$color-lightBlue: #66A2E1;
 $color-red: rgb(255,0,0);
 
 // BASE END
@@ -32,7 +33,7 @@ $color-red: rgb(255,0,0);
 }
 
 .highlightText {
-    color: #66A2E1;
+    color: $color-lightBlue;
 }
 
 // MISCELLANEOUS END
@@ -148,9 +149,15 @@ img {
     background-color: $color-white;
     margin-left: 1.2rem;
     box-shadow: 11px 13px 15px -12px rgba(0,0,0,0.39);
+    cursor: pointer;
 
     &:last-child {
         margin-right: 1.2rem;
+    }
+
+    &Selected {
+        border: $color-lightBlue 0.5px solid;
+        background-color: rgb(244, 249, 255);
     }
 
     &Title {
@@ -169,6 +176,7 @@ img {
     background-color: $color-white;
     margin-left: 10px;
     margin-bottom: 10px;
+    cursor: pointer;
 
     &Image {
         height: 70%;
