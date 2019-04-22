@@ -7,7 +7,7 @@ const CheapFlights = ({stays}) => {
 
     const stayState = useContext(StayContext);
 
-    const lala = (stayId) => {
+    const clickHandler = (stayId) => {
         stayState.handleStayChange(stayId)
     }
 
@@ -17,10 +17,10 @@ const CheapFlights = ({stays}) => {
             <div className={styles.cardsContainer}>
                 {stays.map((stay) => {
                 const price = parseInt(stay.bestPrice, 10).toLocaleString('de-DE');
-                const text = `desde $${price}`
+                const text = `desde $${price}`;
                 return ( 
                     <SmallCard
-                        clickHandler={() => lala(stay.customId)}
+                        clickHandler={() => clickHandler(stay.customId)}
                         title={stay.label}
                         highlightText={true}
                         text={text}

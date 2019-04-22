@@ -23,7 +23,6 @@ const FlightResults = () => {
                     {({loading, error, data}) => {
                         if(loading) return <Spinner />;
                         if(error) return `Error: ${error.message}`;
-
                         return (
                             <div className={styles.cardsContainer}>
                                 {data.allCards.map((flight) => {

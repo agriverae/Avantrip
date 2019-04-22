@@ -18,7 +18,7 @@ const Card = ({flight}) => {
                     <p>{flight.description}</p>
                     <p className={styles.cardDetailsBig} >${flight.price}</p>
                 </div>
-                <a className={`${styles.contentFormat} ${styles.cardLink}`} href="#">Ver vuelo</a>
+                <a className={`${styles.contentFormat} ${styles.cardLink}`} href={flight.link} target="_blank" rel="noopener noreferrer">Ver vuelo</a>
             </div>
         </div>
     )
