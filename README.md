@@ -1,5 +1,11 @@
 # Avantrip App
 
+## Technologies used
+- React
+- Webpack
+- Sass
+- Apollo GraphQL
+
 Follow the next steps in order to install and run the aplication in your local machine
 
 ## Requirements (Must be installed in your local machine)
